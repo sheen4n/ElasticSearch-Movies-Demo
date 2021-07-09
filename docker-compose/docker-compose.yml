@@ -3,6 +3,8 @@ services:
   elasticsearchNode:
     image: elasticsearch:$STACK_VERSION
     container_name: elasticsearchNode
+    volumes:
+      - ./esdata:/usr/share/elasticsearch/data
     environment:
       discovery.type: 'single-node'
       # ELASTIC_PASSWORD: $ELK_PASS

@@ -1,0 +1,28 @@
+version: '3.6'
+services:
+  elasticsearchNode:
+    image: elasticsearch:$STACK_VERSION
+    container_name: elasticsearchNode
+    environment:
+      discovery.type: 'single-node'
+      # ELASTIC_PASSWORD: $ELK_PASS
+      cluster.name: 'dockercluster'
+      node.name: 'node-master'
+      bootstrap.memory_lock: 'true'
+      ES_JAVA_OPTS: '-Xms512m -Xmx512m'
+      http.host: 0.0.0.0
+      http.port: 9200
+      http.cors.allow-origin: '*'
+      http.cors.enabled: 'true'
+      http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+      http.cors.allow-credentials: 'true'
+      # xpack.security.enabled: 'true'
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - docker_elk_node
+volumes:
+  esdataNode:
+networks:
+  docker_elk_node:

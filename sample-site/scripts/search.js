@@ -24,12 +24,35 @@ async function search() {
   // Only run a query if the string contains at least three characters
   if (query.length > 2) {
     // Make the HTTP request with the query as a parameter and wait for the JSON results
+    // const data = {
+    //   size: 25,
+    //   query: {
+    //     multi_match: {
+    //       query,
+    //       fields: ['fields.title^4', 'fields.plot^2', 'fields.actors', 'fields.directors'],
+    //     },
+    //   },
+    // };
+
     const data = {
-      size: 25,
       query: {
         multi_match: {
           query,
           fields: ['fields.title^4', 'fields.plot^2', 'fields.actors', 'fields.directors'],
+          type: 'most_fields',
+          operator: 'and',
+          minimum_should_match: 3,
+          tie_breaker: 0.0,
+          analyzer: 'standard',
+          boost: 1,
+          fuzziness: 'AUTO',
+          fuzzy_transpositions: true,
+          lenient: false,
+          prefix_length: 0,
+          max_expansions: 50,
+          auto_generate_synonyms_phrase_query: true,
+          cutoff_frequency: 0.01,
+          zero_terms_query: 'none',
         },
       },
     };

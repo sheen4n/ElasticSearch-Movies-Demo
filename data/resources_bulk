@@ -1,0 +1,6 @@
+{ "index": { "_index": "resources", "_type": "resource", "_id": "tt2229499" } }
+{"fields":{"categories":["quotes"],"image_url":"https://resource-hogc-test.s3.ap-southeast-1.amazonaws.com/MAC_02068.jpg","description":"A quote from HOGC.","title":"Love God, Love Others, Love Life","type":"image", "url": "https://resource-hogc-test.s3.ap-southeast-1.amazonaws.com/MAC_02068.jpg"},"id":"tt2229499","type":"add"}
+{ "index": { "_index": "resources", "_type": "resource", "_id": "tt1979320" } }
+{"fields":{"categories":["video"],"description":"A sample video.","title":"A sample video resource","type":"video", "playback_id": "YGs5DyG02N4KWQrOSruEyWT02l9MSb6lMuPKJkj5DW4uk", "thumbnail_time": 5},"id":"tt1979320","type":"add"}
+{ "index": { "_index": "resources", "_type": "resource", "_id": "tt1392214" } }
+{"fields":{"categories":["blog"],"image_url":"https://pastorhow.com/wp-content/uploads/2021/06/Father_s_Day_Square_Banner_Version_1.jpeg","description":"A sample article from HOGC.","title":"A father's day message","type":"article", "url": "https://pastorhow.com/tanseowhow/a-fatherless-fathers-day-3-ways-to-turn-the-day-around", "tags": "pastor how"},"id":"tt1392214","type":"add"}
